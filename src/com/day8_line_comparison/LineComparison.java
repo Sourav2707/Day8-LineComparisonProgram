@@ -12,11 +12,12 @@ public class LineComparison {
         lengthOfline2=getLength(scanner.nextInt(), scanner.nextInt(), scanner.nextInt(),scanner.nextInt());
         System.out.println("Length of line1 = "+lengthOfline1);
         System.out.println("Length of line2 = "+lengthOfline2);
-        double l1 = lengthOfline1;
-        double l2 = lengthOfline2;
-        if (l1 > l2) {
+        String l1 = String.valueOf(lengthOfline1);
+        String l2 = String.valueOf(lengthOfline2);
+        var comparing = l1.compareTo(l2);
+        if (comparing > 0) {
             System.out.println("line 1 is greater than line 2");
-        }else if (l1 < l2) {
+        }else if (comparing < 0) {
             System.out.println("line 1 is smaller than line 2");
         }else
             System.out.println("both Lines are equal");
